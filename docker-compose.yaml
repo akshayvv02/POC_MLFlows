@@ -1,0 +1,167 @@
+# create four services. Each service will run a different container.
+# each service will use the image smith-mlflow-f24:latest
+# the each service will run the command "mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./artifacts" and start the container on port 5001, 5002, 5003, 5004 respectively.
+# the service names will be mlflow1, mlflow2, mlflow3, mlflow4 respectively.
+# the container names will be mlflow1, mlflow2, mlflow3, mlflow4 respectively.
+
+services:
+  mlflow-s001-t0:
+    container_name: mlflow-0
+    image: smith515/mlflow-0:latest
+    ports:
+      - "5010:5000"
+      - "23:22"
+      - "1200:1110"
+      - "1201:1111"
+      - "1202:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
+
+
+  mlflow-s001-t1:
+    container_name: mlflow-1
+    image: smith515/mlflow-1:latest
+    ports:
+      - "5011:5000"
+      - "24:22"
+      - "1210:1110"
+      - "1211:1111"
+      - "1212:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
+
+  mlflow-s001-t2:
+    container_name: mlflow-2
+    image: smith515/mlflow-2:latest
+    ports:
+      - "5012:5000"
+      - "25:22"
+      - "1220:1110"
+      - "1221:1111"
+      - "1222:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
+
+  mlflow-s001-t3:
+    container_name: mlflow-3
+    image: smith515/mlflow-3:latest
+    ports:
+      - "5013:5000"
+      - "26:22"
+      - "1230:1110"
+      - "1231:1111"
+      - "1232:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
+
+  mlflow-s001-t4:
+    container_name: mlflow-4
+    image: smith515/mlflow-4:latest
+    ports:
+      - "5014:5000"
+      - "27:22"
+      - "1240:1110"
+      - "1241:1111"
+      - "1242:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
+
+  mlflow-s001-t5:
+    container_name: mlflow-5
+    image: smith515/mlflow-5:latest
+    ports:
+      - "5015:5000"
+      - "28:22"
+      - "1250:1110"
+      - "1251:1111"
+      - "1252:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
+
+  mlflow-s001-t6:
+    container_name: mlflow-6
+    image: smith515/mlflow-6:latest
+    ports:
+      - "5016:5000"
+      - "29:22"
+      - "1260:1110"
+      - "1261:1111"
+      - "1262:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
+
+  mlflow-s001-t7: 
+    container_name: mlflow-7
+    image: smith515/mlflow-7:latest
+    ports:
+      - "5017:5000"
+      - "30:22"
+      - "1270:1110"
+      - "1271:1111"
+      - "1272:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
+
+  mlflow-s001-t8:
+    container_name: mlflow-8
+    image: smith515/mlflow-8:latest
+    ports:
+      - "5018:5000"
+      - "31:22"
+      - "1280:1110"
+      - "1281:1111"
+      - "1282:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
+
+  mlflow-s001-t9:
+    container_name: mlflow-9
+    image: smith515/mlflow-9:latest
+    ports:
+      - "5019:5000"
+      - "32:22"
+      - "1290:1110"
+      - "1291:1111"
+      - "1292:1112"
+    command: sh -c '/usr/sbin/sshd && mlflow server --backend-store-uri sqlite:///mlflow.db -h 0.0.0.0 --app-name basic-auth'
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 4096M
